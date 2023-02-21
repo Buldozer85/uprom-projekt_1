@@ -61,11 +61,21 @@ public class Zlomek {
     }
 
     public Zlomek soucet(Zlomek z1) {
-
         Long jmenovatel = this.jmenovatel * z1.jmenovatel;
         Long citatel = (jmenovatel / this.jmenovatel) * this.citatel + (jmenovatel / z1.jmenovatel) * z1.citatel;
         return new Zlomek(citatel, jmenovatel);
+    }
 
+    public void pricti(Zlomek z1) {
+        Long jmenovatel = this.jmenovatel * z1.jmenovatel;
+        this.setCitatel((jmenovatel / this.jmenovatel) * this.citatel + (jmenovatel / z1.jmenovatel) * z1.citatel)
+                .setJmenovatel(jmenovatel);
+    }
+
+    public void vynasob(Zlomek z2)
+    {
+        this.setJmenovatel(this.jmenovatel * z2.jmenovatel)
+                .setCitatel(this.citatel * z2.citatel);
     }
 
     /*public static String secti(String[] zlomky) {

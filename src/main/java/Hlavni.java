@@ -29,9 +29,9 @@ public class Hlavni {
         Zlomek z1 = new Zlomek(1L, 2L);
         Zlomek z2 = new Zlomek(3L, 4L);
 
-        Zlomek z3 = z1.soucet(z2);
-
-        System.out.println(z3);
+        //Zlomek z3 = z1.soucet(z2);
+        z1.vynasob(z2);
+        System.out.println(z1);
 
        // zlomek.vypis();
 /*
