@@ -24,15 +24,19 @@ public class Hlavni {
 
         vypis(c4, j4);
 
-        Zlomek zlomek = new Zlomek().setCitatel(10).setJmenovatel(7);
+        //Zlomek zlomek = new Zlomek().setCitatel(10).setJmenovatel(7);
 
-        zlomek.vypis();
+        Zlomek z1 = new Zlomek(1L, 2L);
+        Zlomek z2 = new Zlomek(3L, 4L);
 
+        Zlomek z3 = z1.soucet(z2);
+
+        System.out.println(z3);
+
+       // zlomek.vypis();
+/*
         String [] poleZlomku = {"1/2", "1/2"};
-
-
-
-        System.out.println(Zlomek.secti(poleZlomku));
+        System.out.println(Zlomek.secti(poleZlomku));*/
 
 
 
