@@ -74,8 +74,31 @@ public class Zlomek {
 
     public void vynasob(Zlomek z2)
     {
-        this.setJmenovatel(this.jmenovatel * z2.jmenovatel)
-                .setCitatel(this.citatel * z2.citatel);
+       /* this.setJmenovatel(this.jmenovatel * z2.jmenovatel)
+                .setCitatel(this.citatel * z2.citatel);*/
+        this.jmenovatel = this.jmenovatel * z2.jmenovatel;
+        this.citatel = this.citatel * z2.citatel;
+    }
+
+    public void zkratit () {
+        long nsd = nejvetsiSpolecnyDelitel(this.citatel, this.jmenovatel);
+
+        this.citatel /= nsd;
+        this.jmenovatel /= nsd;
+    }
+
+    private long nejvetsiSpolecnyDelitel(long a, long b)
+    {
+        a = Math.abs(a);
+        b = Math.abs(b);
+
+        while (b != 0) {
+            long zbytek = a % b;
+            a = b;
+            b = zbytek;
+        }
+
+        return a;
     }
 
     /*public static String secti(String[] zlomky) {
