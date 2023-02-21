@@ -1,3 +1,7 @@
+package model;
+
+import static services.numericServices.nejvetsiSpolecnyDelitel;
+
 public class Zlomek {
 
     private long citatel;
@@ -87,7 +91,7 @@ public class Zlomek {
         this.jmenovatel /= nsd;
     }
 
-    private long nejvetsiSpolecnyDelitel(long a, long b)
+   /* private long nejvetsiSpolecnyDelitel(long a, long b)
     {
         a = Math.abs(a);
         b = Math.abs(b);
@@ -99,7 +103,7 @@ public class Zlomek {
         }
 
         return a;
-    }
+    }*/
 
     /*public static String secti(String[] zlomky) {
         long jmenovatel = 1;

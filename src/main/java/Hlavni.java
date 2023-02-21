@@ -1,3 +1,5 @@
+import model.Zlomek;
+
 public class Hlavni {
     public static void main (String[] args) {
 
@@ -24,19 +26,20 @@ public class Hlavni {
 
         vypis(c4, j4);
 
-        //Zlomek zlomek = new Zlomek().setCitatel(10).setJmenovatel(7);
+        //model.Zlomek zlomek = new model.Zlomek().setCitatel(10).setJmenovatel(7);
 
         Zlomek z1 = new Zlomek(1L, 2L);
         Zlomek z2 = new Zlomek(3L, 4L);
 
-        //Zlomek z3 = z1.soucet(z2);
+        //model.Zlomek z3 = z1.soucet(z2);
         z1.vynasob(z2);
+        z1.zkratit();
         System.out.println(z1);
 
        // zlomek.vypis();
 /*
         String [] poleZlomku = {"1/2", "1/2"};
-        System.out.println(Zlomek.secti(poleZlomku));*/
+        System.out.println(model.Zlomek.secti(poleZlomku));*/
 
 
 
