@@ -7,6 +7,12 @@ public class Zlomky {
 
     public static final int POCET_ZLOMKU = 5;
     
+    public static void vypis(List<Zlomek> kolekce) {
+        for(var zlomek : kolekce) {
+            System.out.println(zlomek);
+        }
+    }
+    
     
     public static void main(String[] args) {
 
@@ -24,5 +30,11 @@ public class Zlomky {
         }
         
         List<Zlomek> seznamZlomku = new ArrayList<>();
+        
+        ZlomekServices.naplnKolekciNahodnymiZlomky(seznam, POCET_ZLOMKU);
+        
+        vypis(seznamZlomku);
+        
+      
     }
 }
