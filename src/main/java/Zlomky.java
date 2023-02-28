@@ -1,9 +1,13 @@
 import model.Zlomek;
 import model.ZlomekFactory;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Zlomky {
 
     public static final int POCET_ZLOMKU = 5;
+    
+    
     public static void main(String[] args) {
 
         Zlomek [] pole = new Zlomek[POCET_ZLOMKU];
@@ -12,8 +16,13 @@ public class Zlomky {
             pole[i] = ZlomekFactory.vytvorNahodnyZlomek();
             System.out.println(pole[i]);
         }
-
-
-
+        
+        Zlomek vysledny = new Zlomek();
+        
+        for(var zlomek : pole) {
+            vysledny.pricti(zlomek);
+        }
+        
+        List<Zlomek> seznamZlomku = new ArrayList<>();
     }
 }
