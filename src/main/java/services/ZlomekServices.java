@@ -9,7 +9,14 @@ public class ZlomekServices {
      
      for(int i = 0; i < pocet; i++) {
         seznam.add(ZlomekFactory.vytvorNahodnyZlomek());
-     }
-     
+     } 
+   }
+   
+   public static void zkratitZlomkyVKolekci(List<Zlomek> seznam) {
+      
+      for(var zlomek : seznam) {
+        zlomek.zkratit();
+      }
+   
    }
 }
