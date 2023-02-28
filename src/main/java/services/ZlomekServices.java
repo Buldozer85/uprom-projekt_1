@@ -17,6 +17,15 @@ public class ZlomekServices {
       for(var zlomek : seznam) {
         zlomek.zkratit();
       }
+   }
    
+   public static void sectiZlomkyVKolekci(List<Zlomek> seznam) {
+      
+      Zlomek soucet = new Zlomek();
+      
+      for(var zlomek : seznam) {
+         soucet.pricti(zlomek);
+      }
+      
    }
 }
